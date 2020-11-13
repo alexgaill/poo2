@@ -25,7 +25,7 @@ class Database{
         }
     }
 
-    public function query(string $statement, bool $one = false) :object
+    public function query(string $statement, bool $one = false)
     {
         $query = $this->pdo->query($statement);
         if($one){
