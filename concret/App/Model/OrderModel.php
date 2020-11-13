@@ -9,6 +9,6 @@ class orderModel extends Database{
     public function getOrders()
     {
         $query = $this->pdo->query("SELECT * FROM orders");
-        return $query->fetchAll();
+        return $query->fetchAll(\PDO::FETCH_OBJ);
     }
 }
