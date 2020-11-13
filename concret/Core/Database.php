@@ -24,4 +24,19 @@ class Database{
             return $e->getMessage();
         }
     }
+
+    public function query(string $statement, bool $one = false) :object
+    {
+        $query = $this->pdo->query($statement);
+        if($one){
+            return $query->fetch(\PDO::FETCH_OBJ);
+        } else {
+            return $query->fetchAll(\PDO::FETCH_OBJ);
+        }
+    }
+
+    public function prepare(string $statement, array $data = array()){
+        $prepare = $this->pdo->prepare($statement);
+        $prepare->execute($data);
+    }
 }

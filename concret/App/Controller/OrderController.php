@@ -11,7 +11,7 @@ class OrderController{
     }
 
     public function renderIndex(){
-        $orders = $this->model->getOrders();
+        $orders = $this->model->query("SELECT * FROM orders");
         require ROOT."/App/View/orderIndexView.php";
     }
 }
