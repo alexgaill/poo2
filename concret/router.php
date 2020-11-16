@@ -12,6 +12,9 @@ if(array_key_exists("page", $_GET)){
             $controller = new OrderController();
             $controller->renderOne();
 
+        case 'saveOrder':
+            $controller = new OrderController();
+            $controller->saveOrders($_POST);
         default:
             # code...
             break;
