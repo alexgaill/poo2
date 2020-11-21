@@ -9,8 +9,10 @@
 <body>
     <h1>Bons de commande</h1>
     <h2>Liste des commandes</h2>
-    <?= "http://localhost:8888/cours/poo2/concret/Public/assets/css/style.css" ?>
-    <?php var_dump($_SERVER) ?>
+
+    <form action="index.php?page=saveOrder">
+
+    </form>
     <table>
         <thead>
             <tr>
